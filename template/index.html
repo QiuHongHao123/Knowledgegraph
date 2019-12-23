@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+<meta charset="utf-8" />
+<title>基于武器知识图谱的智能问答系统 </title>
+<style type="text/css">
+body {
+	background-color:white;
+}
+.msgInput {
+	display: block;
+	width: 430px;
+	height: 100px;
+	margin: 20px auto;
+}
+.answerShow {
+	display: block;
+	width: 430px;
+	height: 100px;
+	margin: 20px auto;
+}
+.sendbtn {
+	display: block;
+	width: 100px;
+	height: 29px;
+	bottom: 5px;
+	right: 10px;
+	margin-left:auto;
+	margin-right:auto;
+}
+</style>
+</head>
+<body>
+	<img src="{%static '/images/seu.jpg'%}" alt="Southeast University" width="105" height="95" style="position:relative;top:50px;left: 480px">
+    <h1 style="text-align:center;font-family:verdana;">基于武器知识图谱的智能问答系统</h1>
+	<img src="{%static '/images/robot.jpg'%}" alt="Robot Xiaobao" width="95" height="105" style="position:relative;top:60px;left: 380px">
+	<img src="{%static '/images/text.jpg'%}" alt="text" width="220" height="150"style="position:relative;top:20px;left: 380px">
+	<p style="text-align:center;font-family:arial;font-size: 18px;">Input your question:</p>
+    <form action="/search/" method="post">
+	    <textarea name="msg_input" class="msgInput" style="font-size:24px"></textarea>
+	    <button name="sendbtn" class="sendbtn">发送</button>
+	</form>
+	<br>
+	
+    <p style="text-align:center;font-family:arial;font-size: 18px;">This is answer:</p>
+    <textarea name="answer" class="answerShow" style="font-size:24px" disabled>{{data}}</textarea>
+    <br>
+	<br>
+	<br>
+    <div id="footer" style="background-color:lightblue;clear:both;text-align:center;">Authors:Kevin,Mustafa,Marina,Ethon</div>
+
+</body>
+</html>
